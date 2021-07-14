@@ -26,8 +26,8 @@ router.get('/delete', function(req, res){
     })
 })
 router.post('/add', function(req, res){
-    const {title, body, lane, userID} = req.body;
-    const sql = "INSERT INTO `tickets` (`idticket`, `title`, `User_idUser`, `body`, `lane`) VALUES (NULL, '"+title+"', '"+userID+"', '"+body+"', '"+lane+"')";
+    const {title, body, lane, User_idUser} = req.body;
+    const sql = "INSERT INTO `tickets` (`title`, `User_idUser`, `body`, `lane`) VALUES ('"+title+"', '"+User_idUser+"', '"+body+"', '1')";
     con.query(sql, function(err, result){
         if(err){ throw err}
         res.json(result);

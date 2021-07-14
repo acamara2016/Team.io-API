@@ -1,6 +1,6 @@
 module.exports = {
-    HOST: 'localhost',
-    DATABASE: 'team.io',
-    USER: 'root',
-    PASSWORD: ''
+    HOST: 'sql5.freemysqlhosting.net',
+    DATABASE: 'sql5425020',
+    USER: 'sql5425020',
+    PASSWORD: 'cIBwMuCCEQ'
 }
