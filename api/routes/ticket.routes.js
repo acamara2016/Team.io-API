@@ -25,6 +25,14 @@ router.get('/delete', function(req, res){
         res.json(result);
     })
 })
+router.post('/edit', function(req, res){
+    const {id, description, title } = req.body;
+    const sql = "UPDATE `tickets` SET `title` = '"+title+"', `body` = '"+description+"' WHERE `tickets`.`id` = "+id+"";
+    con.query(sql, function(err,result){
+        if(err){ throw err}
+        res.json(result);
+    })
+})
 router.post('/add', function(req, res){
     const {title, body, lane, User_idUser} = req.body;
     const sql = "INSERT INTO `tickets` (`title`, `User_idUser`, `body`, `lane`) VALUES ('"+title+"', '"+User_idUser+"', '"+body+"', '1')";
